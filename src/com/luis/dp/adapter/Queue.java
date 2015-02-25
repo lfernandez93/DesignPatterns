@@ -3,21 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.luis.dp.adapter;
 
 /**
  *
- * @author 984201
+ * @author Luis
  */
+public interface Queue {
 
+    public void enqueue(String enqueued);
 
-public interface DataStructure {
-
-    public void push(String str);
-
-    public String pop();
-
-    public boolean isEmpty();
+    public String dequeue();
     
+    public boolean isEmpty();
 }

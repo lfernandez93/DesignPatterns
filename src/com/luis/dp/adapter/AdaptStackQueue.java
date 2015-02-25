@@ -9,7 +9,7 @@ package com.luis.dp.adapter;
  *
  * @author 984201
  */
-public class AdaptStack implements DataStructure, AdaptInter {
+public class AdaptStackQueue implements Stack,Queue {
 
     private QueueOrStack queueOrStack=new QueueOrStack();
 
@@ -31,6 +31,21 @@ public class AdaptStack implements DataStructure, AdaptInter {
     @Override
     public boolean isEmpty() {
         return queueOrStack.empty();
+    }
+
+    @Override
+    public void enqueue(String enqueued) {
+        queueOrStack.add(enqueued);
+    }
+
+    @Override
+    public String dequeue() {
+     int start = queueOrStack.getStart();
+        String str = queueOrStack.get(start);
+        queueOrStack.remove(start);
+        queueOrStack.setEnd(start++);
+        return str;   
+        
     }
 
 }
