@@ -25,7 +25,7 @@ public class Employee implements Cloneable, Serializable {
     private String zipcode;
     private Employee supervisor;
     private Employee staff[];
-
+    private boolean doSupervisor=true;
     public Employee(String firstName) {
         this.firstName = firstName;
     }
@@ -99,14 +99,19 @@ public class Employee implements Cloneable, Serializable {
     }
 
     public void setStaff(Employee[] staff) {
+        for (Employee staff1 : staff) {
+            staff1.setSupervisor(this);
+        }
         this.staff = staff;
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Employee empClone = (Employee) super.clone();
-        //empClone = recursiveCloneSupervisor(empClone);
-        return recursiveCloneSupervisor(empClone);
+        if(doSupervisor){
+            empClone = recursiveCloneSupervisor(empClone);
+        }
+        return empClone;
     }
 
     public Employee recursiveCloneSupervisor(Employee empClone) throws CloneNotSupportedException {
@@ -121,27 +126,28 @@ public class Employee implements Cloneable, Serializable {
     }
 
     public Employee recursiveCloneStaff(Employee empClone) {
-
+        //doSupervisor=false;
         if (empClone.getStaff() != null) {
             Employee[] staffCopies = new Employee[empClone.getStaff().length];
             for (int i = 0; i < staffCopies.length; i++) {
 
                 try {
+                    empClone.getStaff()[i].doSupervisor=false;
                     staffCopies[i] = (Employee) empClone.getStaff()[i].clone();
-                    
-                    staffCopies[i].setSupervisor(this);
+            
                 } catch (CloneNotSupportedException ex) {
                     Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             empClone.setStaff(staffCopies);
         }
+        doSupervisor=true;
         return empClone;
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "firstName=" + firstName + ", supervisor=" + supervisor + ", staff=" + Arrays.toString(staff) + '}';
+        return "Employee{" + "firstName=" + firstName + ", supervisor=" + supervisor + ",";
     }
 
 }
