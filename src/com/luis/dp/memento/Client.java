@@ -16,9 +16,13 @@ public class Client {
 
     private String firstName;
     private String lastName;
-    private char sex;
-    private Date dob;
+    private String dob;
     private int id;
+
+    @Override
+    public String toString() {
+        return "Client{" + "firstName=" + firstName + ", lastName=" + lastName + ", dob=" + dob + ", id=" + id + '}';
+    }
 
     public String getFirstName() {
         return firstName;
@@ -36,19 +40,11 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
