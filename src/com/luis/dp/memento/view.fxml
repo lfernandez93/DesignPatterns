@@ -9,15 +9,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luis.dp.memento.ViewController">
    <children>
-      <TextField id="firstName" layoutX="124.0" layoutY="74.0" />
-      <TextField id="lastName" layoutX="124.0" layoutY="111.0" />
-      <SplitMenuButton id="sex" layoutX="124.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Choose&#10;M&#10;F">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </SplitMenuButton>
-      <TextField id="id" layoutX="124.0" layoutY="34.0" />
+      <TextField fx:id="firstName" layoutX="124.0" layoutY="74.0" />
+      <TextField fx:id="lastName" layoutX="124.0" layoutY="111.0" />
+      <TextField fx:id="id" layoutX="124.0" layoutY="34.0" />
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="39.0" layoutY="34.0" prefHeight="25.0" prefWidth="73.0" text="ID" textAlignment="RIGHT">
          <font>
             <Font name="Calibri" size="18.0" />
@@ -33,19 +27,15 @@
             <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="87.0" layoutY="154.0" text="Sex">
+      <Label layoutX="22.0" layoutY="155.0" text="Date of Birth">
          <font>
             <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="193.0" text="Date of Birth">
-         <font>
-            <Font name="Calibri" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="175.0" layoutY="254.0" mnemonicParsing="false" text="Undo" />
-      <Button layoutX="116.0" layoutY="254.0" mnemonicParsing="false" text="Read" />
-      <Button layoutX="232.0" layoutY="254.0" mnemonicParsing="false" text="Save" />
-      <TextField id="dob" layoutX="124.0" layoutY="192.0" />
+      <Button layoutX="175.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleUndo" text="Undo" />
+      <Button layoutX="116.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleRead" text="Read" />
+      <Button layoutX="232.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSave" text="Save" />
+      <TextField fx:id="dob" layoutX="124.0" layoutY="154.0" />
+      <Button layoutX="22.0" layoutY="254.0" mnemonicParsing="false" onAction="#handlePersist" text="Persist" />
    </children>
 </AnchorPane>

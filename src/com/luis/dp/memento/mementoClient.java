@@ -25,6 +25,7 @@ public class mementoClient extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        System.out.println(getClass().getResource("view.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
         
         Scene scene = new Scene(root);
