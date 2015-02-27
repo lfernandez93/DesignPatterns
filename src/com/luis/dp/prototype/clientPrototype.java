@@ -35,17 +35,24 @@ public class clientPrototype {
         //marcela.setSupervisor(winta);
         //george.setSupervisor(winta);
         Employee[] staff = {marcela, george};
+        Employee[] staff2 = {marcela};
         winta.setStaff(staff);
+        george.setStaff(staff2);
         winta.setSupervisor(sheriff);
         sheriff.setSupervisor(mou);
         mou.setSupervisor(donya);
         donya.setSupervisor(luis);
+        
         try {
             Employee wintaCopy = (Employee) winta.clone();
-            wintaCopy.setSupervisor(donya);
+           // wintaCopy.setSupervisor(donya);
+            
             wintaCopy.getSupervisor().setFirstname("safwat");
-            wintaCopy.getStaff()[0].getSupervisor().setFirstname("asd");
+            mou.setFirstname("saul");
+            //wintaCopy.getStaff()[0].getSupervisor().setFirstname("asd");
             //wintaCopy.setStaff(null);
+            System.out.println(wintaCopy.getSupervisor().getSupervisor());
+            System.out.println(winta.getSupervisor().getSupervisor());
             System.out.println(winta);
             System.out.println(wintaCopy);
         } catch (CloneNotSupportedException ex) {
