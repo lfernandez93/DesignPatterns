@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author 984201
  */
-public class DBManager {
+public class DBFacade {
 
     private Connection conn;
 
@@ -28,7 +28,7 @@ public class DBManager {
             conn = DriverManager.getConnection("<database>");
 
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {
-            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
     }
@@ -39,7 +39,7 @@ public class DBManager {
             try {
                 prep = conn.prepareStatement(query);
             } catch (SQLException ex) {
-                Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
             }
             prep.setString(1, "<column value>");
             ResultSet rset = prep.executeQuery();
@@ -47,7 +47,7 @@ public class DBManager {
                 System.out.println(rset.getString("<column name"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -57,14 +57,22 @@ public class DBManager {
             try {
                 call = conn.prepareCall(procedure);
             } catch (SQLException ex) {
-                Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
             }
             call.setInt(1, 1972);
             call.registerOutParameter(2, java.sql.Types.INTEGER);
             call.execute();
             System.out.println(call.getInt(2));
         } catch (SQLException ex) {
-            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void close(){
+        try {
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DBFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

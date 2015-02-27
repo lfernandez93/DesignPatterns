@@ -19,7 +19,7 @@ import java.sql.SQLException;
 public class facadeClient {
 
     public static void main(String[] arg) {
-        DBManager dbManager = new DBManager();
+        DBFacade dbManager = new DBFacade();
         dbManager.connect("localhost/db");
         dbManager.query("SELECT * FROM myTable");
         dbManager.callProcedure("call Procedure()");
