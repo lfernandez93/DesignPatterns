@@ -15,6 +15,11 @@ public class Call {
     private boolean probablyAClient;
     private State state = State.NONE;
 
+    public Call(int id, boolean probablyAclient) {
+        this.id = id;
+        this.probablyAClient = probablyAclient;
+    }
+
     public State getState() {
         return state;
     }
