@@ -7,7 +7,7 @@ package com.luis.dp.proxy;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public interface ITable {
 

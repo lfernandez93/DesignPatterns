@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class FileTrace implements Trace {
 

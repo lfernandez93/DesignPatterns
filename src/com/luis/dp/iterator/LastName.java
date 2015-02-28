@@ -7,9 +7,9 @@ package com.luis.dp.iterator;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
-public class LastName implements MarkUser{
+public class LastName{
     private User user;
     private String lastName;
 

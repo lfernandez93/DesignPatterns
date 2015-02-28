@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luis.dp.adapter;
+
+package com.luis.dp.chainofresponsability;
 
 /**
  *
  * @author Luis Fernandez
  */
-public interface Stack {
-
-    public void push(String str);
-
-    public String pop();
-
-    public boolean isEmpty();
-
+public interface Agent<T> {
+       public void handleRequest(T request);
+       public boolean canHandleRequest(T request);
 }

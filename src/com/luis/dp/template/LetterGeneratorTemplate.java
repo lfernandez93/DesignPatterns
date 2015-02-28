@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public abstract class LetterGeneratorTemplate {
 

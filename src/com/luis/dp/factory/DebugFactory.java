@@ -7,7 +7,7 @@ package com.luis.dp.factory;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public interface DebugFactory {
     public Trace createDebugTool(String type);

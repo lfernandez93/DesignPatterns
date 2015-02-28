@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class clientPrototype {
     

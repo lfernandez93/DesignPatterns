@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class CareTaker<T> {
     private List<Memento<T>> savedStates = new ArrayList<Memento<T>>();

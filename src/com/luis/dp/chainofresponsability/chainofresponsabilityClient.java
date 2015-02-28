@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luis.dp.factory;
+
+package com.luis.dp.chainofresponsability;
 
 /**
  *
  * @author Luis Fernandez
  */
-public class clientFactory {
+public class chainofresponsabilityClient {
     public static void main(String[] args) {
-        DebugFactory db = new DebugToolFactory();
-        Trace debugTool = db.createDebugTool(args[0]);
-        debugTool.setDebug(true);
-        debugTool.debug("hello");
+        
     }
 }

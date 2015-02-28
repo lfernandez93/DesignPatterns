@@ -7,7 +7,7 @@ package com.luis.dp.iterator;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class iteratorClient {
 

@@ -7,7 +7,7 @@ package com.luis.dp.adapter;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class AdaptStackQueue implements Stack,Queue {
 

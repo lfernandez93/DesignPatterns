@@ -3,18 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luis.dp.adapter;
+package com.luis.dp.chainofresponsability;
 
 /**
  *
  * @author Luis Fernandez
  */
-public interface Stack {
+public enum State {
 
-    public void push(String str);
-
-    public String pop();
-
-    public boolean isEmpty();
-
+    NONE, VALIDATOR, DATAWASHER, REPORTER
 }

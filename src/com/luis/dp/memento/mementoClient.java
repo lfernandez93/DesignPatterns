@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class mementoClient extends Application {
     

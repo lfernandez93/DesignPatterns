@@ -10,7 +10,7 @@ import java.sql.Date;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class Client {
 

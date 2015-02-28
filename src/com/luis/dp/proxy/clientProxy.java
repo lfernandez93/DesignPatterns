@@ -7,7 +7,7 @@ package com.luis.dp.proxy;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class clientProxy {
 

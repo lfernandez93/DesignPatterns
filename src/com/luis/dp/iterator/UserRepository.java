@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class UserRepository implements Container{
     private Map<String,User> userMap = new HashMap();

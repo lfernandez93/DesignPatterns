@@ -7,7 +7,7 @@ package com.luis.dp.composite;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class Permutator {
     private int count;

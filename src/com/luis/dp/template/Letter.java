@@ -7,7 +7,7 @@ package com.luis.dp.template;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class Letter {
 

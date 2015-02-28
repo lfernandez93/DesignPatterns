@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class facadeClient {
 

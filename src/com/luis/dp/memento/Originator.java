@@ -7,7 +7,7 @@ package com.luis.dp.memento;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class Originator<T> {
 

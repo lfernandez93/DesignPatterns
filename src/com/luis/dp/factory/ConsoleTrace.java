@@ -7,7 +7,7 @@ package com.luis.dp.factory;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class ConsoleTrace implements Trace{
     private boolean debug;

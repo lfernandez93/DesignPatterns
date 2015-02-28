@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.luis.dp.iterator;
+
+package com.luis.dp.chainofresponsability;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
-public interface MarkUser {
+public class ReporterAgent {
     
 }

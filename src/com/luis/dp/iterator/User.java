@@ -7,7 +7,7 @@ package com.luis.dp.iterator;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class User {
     private int id;

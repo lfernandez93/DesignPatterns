@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public class HashIterator implements Iterator<User>{
     private Map<String,User> mapUser;

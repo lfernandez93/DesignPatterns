@@ -7,7 +7,7 @@ package com.luis.dp.adapter;
 
 /**
  *
- * @author Luis
+ * @author Luis Fernandez
  */
 public interface Queue {
 

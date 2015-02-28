@@ -8,7 +8,7 @@ package com.luis.dp.composite;
 
 /**
  *
- * @author 984201
+ * @author Luis Fernandez
  */
 public class compositeClient {
     
@@ -20,7 +20,7 @@ public class compositeClient {
     }
     
     public static char[]  generateString(int n){
-        char a = 'a';
+        char a = 'A';
         char[] theCharArray = new char[n];
         for (int i = 0; i < n; i++) {
             theCharArray[i]=a++;
