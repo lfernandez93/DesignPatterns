@@ -33,7 +33,7 @@ public class TextContent implements Content {
         String body = "";
 
         for (Request request : requests) {
-            body +=request.getReqId() + " " + request.getReqContent() + " " + request.getAgent().getName() + " " + request.getRequester().getName() + " " + request.isIsAnswered();
+            body +=request.getReqId() + " " + request.getReqContent() + " " + request.getAgent().getName() + " " + request.getRequester().getName() + " " + request.isIsAnswered()+"\n";
         }
         return body;
     }

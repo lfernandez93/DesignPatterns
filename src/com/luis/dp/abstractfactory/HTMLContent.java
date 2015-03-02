@@ -33,7 +33,7 @@ public class HTMLContent implements Content {
         String body = "<body><table>\n";
 
         for (Request request : requests) {
-            body += "<tr>" + request.getReqId() + " " + request.getReqContent() + " " + request.getAgent().getName() + " " + request.getRequester().getName() + " " + request.isIsAnswered() + "</tr>";
+            body += "<tr>" + request.getReqId() + " " + request.getReqContent() + " " + request.getAgent().getName() + " " + request.getRequester().getName() + " " + request.isIsAnswered() + "</tr>\n";
         }
         body += "</body></table>\n";
         return body;
